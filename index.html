@@ -1,0 +1,37 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="style.css" />
+      <title>
+         Wage Calculator
+      </title>
+      </head>
+      <body>
+         <h1>
+          Wage Calculator
+         </h1>
+         <h2>
+            Made for folks who work for tips.
+         </h2>
+         <div>
+            <form id="wageForm">
+               <label id="hoursLabel"> Hours worked:</label>
+               <input id="hoursWorked" placeholder="0.00">
+               <br>
+               <label id=hourlyLabel> Hourly wage:</label> 
+               <span style="font-size:20px;"> $</span>
+               <input id="hourlyWage" placeholder="0.00">
+               <br>
+               <label id="tipsLabel"> Tips earned:</label>
+               <span style="font-size:20px;"> $</span>
+               <input id="tips" placeholder="0.00">
+            </form>
+            <br>
+            <button id ="submit" onclick="trueWage()">Submit</button>
+         </div>
+         <p id="results">
+         </p>
+         </body>
+         <script src="app.js"></script>
+ </html>
