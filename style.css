@@ -20,7 +20,7 @@ body {
 input {
   padding-top: 10px;
   padding-left: 0px;
-  width: 50px;
+  width: 80px;
   height: 40px;
   font-size: 20px;
   border: 0;
@@ -30,3 +30,6 @@ input:focus {
   outline: none;
 }
 
+.dollarSign {
+  font-size: 20px;
+}

@@ -6,9 +6,9 @@ function trueWage(){
 	var totalHourly = hourlyWage*hoursWorked;
 	var totalEarnings = totalHourly+tips;
 	var trueHourly = totalEarnings/hoursWorked;
-	var roundedHourly = trueHourly.toFixed(2)
-
-	document.getElementById("results").innerHTML = "You earned $"+totalEarnings+" today, averaging $"+roundedHourly+" per hour.";
+	var roundedTotal = currencyFormat(totalEarnings);
+	var roundedHourly = currencyFormat(trueHourly);
+	document.getElementById("results").innerHTML = "You earned a total of "+roundedTotal+", averaging "+roundedHourly+" per hour.";
 	submit.innerHTML = "Reset";
 	submit.onclick = startOver;
 
@@ -24,3 +24,6 @@ function startOver(){
 	submit.onclick = trueWage;
 }
 
+function currencyFormat(num) {
+  return '$' + num.toFixed(2).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
